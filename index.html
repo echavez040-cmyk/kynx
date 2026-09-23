@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head> <!--Aqui viene los metadatos y la conexiion al style.css-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name ="author" content="Emiliano Moreno">
+<meta name ="author" content="Es un diseño de un carrito de compras
+para una E-COMERCE de ropa deportiva.">
+<meta name="keywords" content="Ropa Gymshark y Youngla, Ropa deportiva, Ropa Gym">
+
+<!--Es el titulo de la pagina web-->
+<title>Cariito de compras - KYNX</title>
+
+<!--Enlaza con la hoja de estilos-->
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
+
+ </head> 
+<body class="paper-texture">
+
+<header class="site-header">
+    <div class="container header-inner"> 
+         <a href="#inicio" class="logo">
+       <img src="img/logoooo.png" width="100" height="100">
+     
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#oferta">Oferta</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero hacer un pedido en Dulce Detalle.')">
+          <i data-lucide="message-circle"></i> Shop now
+        </button>
+      </nav>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">☰</button>
+    </div>
+     
+       <nav id="mobile-menu" class="mobile-nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#oferta">Oferta</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+         <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero hacer un pedido en Dulce Detalle.')">
+        <i data-lucide="message-circle"></i> Pedir ahora
+      </button>
+    </nav>
+    </header>
+
+
+    <main>
+ <!-- ================= HERO ================= -->
+    <section id="inicio" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Better every day</p>
+          <h1>Move with purpose</h1>
+          <p class="lead">Entrena hoy para superar quien fuiste ayer.</p>
+          <div class="hero-actions">
+            <a href="#productos" class="btn primary">Ver productos</a>
+            <button type="button" class="btn outline" onclick="openWhatsApp('Hola, vi su página y me gustaría conocer sus regalos personalizados.')">Comprar por WhatsApp</button>
+          </div>
+          <p class="trust"><i data-lucide="heart"></i> El progreso no se espera, se construye.</p>
+        </div>
+        <div class="hero-image reveal">
+          <img src="img/8.jpg" alt="logo gorra">
+          <span class="tag tag-love">Lo mejor del deporte</span>
+          <span class="tag tag-custom">Pedidos a domicilio</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRODUCTOS ================= -->
+    <section id="productos" class="products">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Regalos con historia</p>
+          <h2>Conoce nuestros productos</h2>
+          <p class="lead">Elige un detalle especial y hazlo único.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card reveal">
+            <img src="img/6.jpg" alt="producto6">
+            <div class="product-body">
+              <span class="tag">Lo mas vendido</span>
+              <h3>    KYNX Aero Cap</h3>
+              <p class="price">$500 MXN</p>
+              <p class="description">     Gorra ligera y transpirable, diseñada para mantenerte fresco durante tus carreras.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-caja')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/3.jpg" alt="producto3">
+            <div class="product-body">
+              <span class="tag">Nuevo</span>
+              <h3>    KYNX Wind Jacket</h3>
+              <p class="price">$1800 MXN</p>
+              <p class="description">    Chamarra ligera diseñada para protegerte del viento sin limitar tus movimientos mientras corres.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-vela')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/11.webp" alt="producto7">
+            <div class="product-body">
+              <span class="tag">Nuevo</span>
+              <h3>    KYNX Speed Vision</h3>
+              <p class="price">$1500 MXN</p>
+              <p class="description">    Lentes ligeros con protección UV y diseño deportivo para mayor comodidad durante tus carreras.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-taza')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/9.jpg" alt="producto9">
+            <div class="product-body">
+              <span class="tag">Nuevo</span>
+              <h3>    KYNX Performance Shorts</h3>
+              <p class="price">$1100 MXN</p>
+              <p class="description">    Tela de secado rápido y ajuste cómodo para mantenerte fresco incluso durante entrenamientos intensos.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-jardin')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/4.jpg" alt="producto4">
+            <div class="product-body">
+              <span class="tag">Lo más vendido</span>
+              <h3>    KYNX Performance Jacket</h3>
+              <p class="price">$1800 MXN</p>
+              <p class="description">    Protección contra viento y lluvia ligera, ideal para entrenar en diferentes condiciones climáticas.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-kit')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/13.webp" alt="producto1">
+            <div class="product-body">
+              <span class="tag">Lo más vendido</span>
+              <h3>    KYNX Pro Runner</h3>
+              <p class="price">$1500MXN</p>
+              <p class="description">    Diseño premium, estructura ligera y protección solar para acompañarte en carreras exigentes.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-tarjeta')">Ver producto</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BENEFICIOS ================= -->
+    <section id="beneficios" class="benefits">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>¿Por qué comprarnos?</h2>
+        </div>
+        <div class="benefits-grid">
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="trending-up"></i></div>
+            <h3>Ropa de alto rendimiento</h3>
+            <p>Diseñada para acompañarte con comodidad y libertad en cada kilómetro.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="circle-check-big"></i></div>
+            <h3>Comodidad en cada carrera</h3>
+            <p>Materiales ligeros y transpirables para que te concentres en superar tus límites.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="split"></i></div>
+            <h3>Envíos rápidos</h3>
+            <p>Recibe tus productos KYNX de forma segura y rápida hasta tu domicilio.</p>
+          </article>
+          <article class="benefit-card reveal">
+           <div class="benefit-icon"><i data-lucide="shopping-cart"></i></div>
+            <h3>Compra fácil y segura</h3>
+            <p>Elige tu equipo, realiza tu pedido y prepárate para salir a correr.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ================= OFERTA ================= -->
+    <section id="oferta" class="offer">
+      <div class="container">
+        <div class="offer-panel reveal">
+          <span class="tag tag-light">Oferta de bienvenida</span>   
+          <h2>10% de descuento en tu primer pedido</h2>
+          <p>Equípate para tu próxima carrera y disfruta un descuento especial en tu primera compra KYNX.</p>
+          <button id="offer-button" type="button" class="btn butter" onclick="revealOffer()">[ COMPRAR AHORA ]</button>
+          <div id="offer-reveal" class="offer-reveal hidden" aria-live="polite">
+            <p class="offer-reveal-title">¡Listo! Tu código de bienvenida es:</p>
+            <div class="offer-code-row">
+              <span class="offer-code">BLESS10</span>
+              <button id="copy-code" type="button" class="btn outline" onclick="copyDiscount()">Copiar código</button>
+              <button type="button" class="btn whatsapp" onclick="openWhatsApp('Hola, quiero usar mi código DULCE10 en mi primer pedido.')">Pedir por WhatsApp</button>
+            </div>
+            <p id="copy-feedback" class="copy-feedback hidden" role="status">Código copiado</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIOS ================= -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Referencias</p>
+          <h2>Lo que dicen nuestros clientes</h2>
+        </div>
+        <div class="testimonial-viewport">
+          <div id="testimonial-track" class="testimonial-track">
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="https://st3.depositphotos.com/1017228/18878/i/450/depositphotos_188781580-stock-photo-handsome-cheerful-young-man-standing.jpg" alt="Retrato genérico de una mujer sonriente.">
+                  <div>
+                    <p class="name">Carlos R.</p>
+                    <p class="occasion"></p>
+                  </div>
+                </div>
+                <p class="quote">"La ropa queda súper bien y se siente cómoda para entrenar. "</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="https://st2.depositphotos.com/4196725/6217/i/450/depositphotos_62170405-stock-photo-young-cool-black-man-proud.jpg" alt="Retrato genérico de un hombre sonriente.">
+                  <div>
+                    <p class="name">Diego R.</p>
+                    <p class="occasion"></p>
+                  </div>
+                </div>
+                <p class="quote">"La tela es ligera y no se siente pesada. Definitivamente volvería a comprar."</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="https://plus.unsplash.com/premium_photo-1690407617542-2f210cf20d7e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29uYXxlbnwwfHwwfHx8MA%3D%3D" alt="Retrato genérico de una mujer joven sonriente.">
+                  <div>
+                    <p class="name">Sofía P.</p>
+                    <p class="occasion"></p>
+                  </div>
+                </div>
+                <p class="quote">"Me gustó mucho el diseño y el ajuste. La uso tanto para el gym como para salir."</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button id="testimonial-prev" type="button" aria-label="Testimonio anterior"><i data-lucide="arrow-left"></i></button>
+          <div id="testimonial-dots" class="dots" aria-label="Seleccionar testimonio">
+            <button class="active" aria-label="Ver testimonio 1" aria-current="true"></button>
+            <button aria-label="Ver testimonio 2" aria-current="false"></button>
+            <button aria-label="Ver testimonio 3" aria-current="false"></button>
+          </div>
+          <button id="testimonial-next" type="button" aria-label="Siguiente testimonio"><i data-lucide="arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+     <!-- ================= CONTACTO ================= -->
+    <section id="contacto" class="contact">
+      <div class="container contact-panel reveal">
+        <div class="contact-text">
+          <p class="eyebrow">Estamos cerca</p>
+          <h2>Hablemos de tu próximo pedido</h2>
+          <p class="lead">Busca siempre la mejor calidad en todo.</p>
+          <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero platicar sobre un detalle personalizado.')">Escribir por WhatsApp</button>
+        </div>
+        <aside class="contact-info" aria-label="Datos de contacto">
+          <ul>
+            <li><i data-lucide="instagram"></i> <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">@emi.mooreno</a></li>
+            <li><i data-lucide="mail"></i> <a href="mailto:e.chavez040@ebc.edu.mx">e.chavez040@ebc.edu.mx</a></li>
+            <li><i data-lucide="clock-3"></i> Lunes a sábado, 8:00 a 17:00</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+         
+ 
+</main>
+<!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="brand">Colección</p>
+      <p class="love">Running</p>
+      <nav class="footer-links">
+        <a href="#productos">Accesorios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+
+  <!-- Botón flotante de WhatsApp -->
+  <button id="whatsapp-float" type="button" class="whatsapp-float" aria-label="Escribir por WhatsApp" onclick="openWhatsApp('Hola, quiero conocer los detalles personalizados de Dulce Detalle.')">
+    <i data-lucide="message-circle"></i>
+  </button>
+  <!-- ================= MODALES DE PRODUCTO ================= -->
+  <div id="modal-caja" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-caja-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/6.jpg" alt="Caja de regalo rosa con chocolates y listón.">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-caja')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-caja-title">KYNX Aero Cap</h2>
+        <p class="price">$500 MXN</p>
+        <p>Gorra ligera y transpirable, diseñada para mantenerte fresco durante tus carreras.</p>
+    
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir la Caja Abrazo. ¿Me ayudan a personalizarla?')">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+  <div id="modal-vela" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-vela-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/3.jpg" alt="Velas artesanales en frascos con mechas de madera.">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-vela')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-vela-title">KYNX Wind Jacket</h2>
+        <p class="price">$1800 MXN</p>
+        <p>Chamarra ligera diseñada para protegerte del viento sin limitar tus movimientos mientras corres.</p>
+       
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir la Vela Momento. ¿Qué aromas tienen disponibles?')">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+  <div id="modal-taza" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-taza-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/11.webp" alt="Taza blanca con diseño floral personalizado.">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-taza')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-taza-title">KYNX Speed Vision</h2>
+        <p class="price">$1500 MXN</p>
+        <p>Lentes ligeros con protección UV y diseño deportivo para mayor comodidad durante tus carreras.</p>
+        
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir una Taza Personalizada. Tengo una frase en mente.')">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+  <div id="modal-jardin" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-jardin-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/9.jpg" alt="Suculentas envueltas en tela rústica para regalo.">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-jardin')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-jardin-title">KYNX Performance Shorts</h2>
+        <p class="price">$1100 MXN</p>
+        <p>Tela de secado rápido y ajuste cómodo para mantenerte fresco incluso durante entrenamientos intensos.</p>
+        
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir un Mini Jardín. ¿Qué opciones de maceta tienen?')">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+  <div id="modal-kit" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-kit-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/4.jpg" alt="Regalos coloridos y postres para celebrar un cumpleaños.">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-kit')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-kit-title">KYNX Performance Jacket</h2>
+        <p class="price">$1800 MXN</p>
+        <p>Protección contra viento y lluvia ligera, ideal para entrenar en diferentes condiciones climáticas.</p>
+       
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir un Kit Cumpleaños. ¿Me comparten opciones?')">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+  <div id="modal-tarjeta" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-tarjeta-title">
+    <div class="modal-panel">
+      <div class="modal-image">
+        <img src="img/13.webp" alt="Tarjetas artesanales con flores secas y lavanda.">
+        <button type="button" class="modal-close" aria-label="Cerrar producto" onclick="closeModal('modal-tarjeta')"><i data-lucide="x"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 id="modal-tarjeta-title">KYNX Pro Runner</h2>
+        <p class="price">$1500 MXN</p>
+        <p>Diseño premium, estructura ligera y protección solar para acompañarte en carreras exigentes.</p>
+        
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero pedir una Tarjeta con Flores. ¿Puedo incluir un mensaje?')">Pedir por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+
+    <script src="js/scipt.js"></script>
+</body>
+</html>
